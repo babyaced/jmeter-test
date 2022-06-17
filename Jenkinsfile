@@ -10,7 +10,7 @@ pipeline{
         }
         stage('Install bzt'){
             steps{
-                sh 'pip install bzt'
+                sh 'pip install bzt --user'
             }
         }
     }
