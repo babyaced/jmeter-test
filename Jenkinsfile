@@ -1,6 +1,6 @@
 pipeline{
     agent{
-        docker{ image 'python:latest'}
+        dockerfile true
     }
     stages{
         stage('Test'){
@@ -8,11 +8,9 @@ pipeline{
                 sh 'python --version'
             }
         }
-        stage('Install bzt'){
+        stage('Use bzt'){
             steps{
-                sh 'pip install virtualenv'
-                sh 'virtualenv jmeter-test -p python3 && jmeter-test/bin/activate'
-                sh 'pip install bzt --user'
+                sh 'bzt blazedemo_script.jmx'
             }
         }
     }
