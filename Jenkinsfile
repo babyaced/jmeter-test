@@ -10,7 +10,7 @@ pipeline{
         }
         stage('Use bzt'){
             steps{
-                sh 'bzt blazedemo_script.jmx'
+                sh 'bzt taurus.yml'
             }
         }
     }

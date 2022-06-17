@@ -1,0 +1,5 @@
+---
+execution:
+- executor: jmeter
+  scenario:
+    script: blazedemo_script.jmx
