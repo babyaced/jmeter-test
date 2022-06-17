@@ -10,4 +10,4 @@ RUN pip3 install -r requirements.txt
 
 COPY blazedemo_script.jmx blazedemo_script.jmx
 
-RUN mkdir /.bzt-rc
+RUN touch /.bzt-rc
