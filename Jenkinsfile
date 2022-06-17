@@ -8,5 +8,10 @@ pipeline{
                 sh 'python --version'
             }
         }
+        stage('Install bzt'){
+            steps{
+                sh 'pip install bzt'
+            }
+        }
     }
 }
