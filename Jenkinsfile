@@ -10,6 +10,7 @@ pipeline{
         }
         stage('Install bzt'){
             steps{
+                sh 'pip install virtualenv'
                 sh 'virtualenv jmeter-test -p python3 && jmeter-test/bin/activate'
                 sh 'pip install bzt --user'
             }
