@@ -2,14 +2,12 @@
 
 FROM python
 
-WORKDIR /app
+RUN pip install bzt
 
 COPY .bzt-rc.yml /root/.bzt-rc
 
-RUN pip install bzt
+WORKDIR /tmp
 
 COPY blazedemo_script.jmx blazedemo_script.jmx
-
-RUN touch /.bzt-rc
 
 ENTRYPOINT ["bzt"]
