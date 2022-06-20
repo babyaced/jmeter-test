@@ -12,4 +12,4 @@ COPY blazedemo_script.jmx blazedemo_script.jmx
 
 RUN touch /.bzt-rc
 
-ENTRYPOINT ["BZT"]
+ENTRYPOINT ["bzt"]
