@@ -10,6 +10,7 @@ pipeline{
         // }
         stage('Use bzt'){
             steps{
+                sh 'bzt --help'
                 sh 'bzt blazedemo_script.jmx'
             }
         }
