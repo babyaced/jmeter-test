@@ -6,7 +6,7 @@ WORKDIR /app
 
 COPY requirements.txt requirements.txt
 
-RUN pip install bzt
+RUN pip3 install -r requirements.txt
 
 COPY blazedemo_script.jmx blazedemo_script.jmx
 
