@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-FROM python:latest
+FROM blazemeter/taurus
 
 WORKDIR /app
 
