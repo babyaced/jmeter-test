@@ -4,7 +4,7 @@ FROM python
 
 RUN pip install bzt
 
-COPY .bzt-rc.yml /root/.bzt-rc
+COPY .bzt-rc.yml .bzt-rc
 
 WORKDIR /tmp
 
