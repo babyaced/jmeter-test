@@ -4,7 +4,7 @@ FROM python
 
 WORKDIR /app
 
-COPY requirements.txt requirements.txt
+COPY .bzt-rc.yml /root/.bzt-rc
 
 RUN pip install bzt
 
