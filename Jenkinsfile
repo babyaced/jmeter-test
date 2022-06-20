@@ -1,5 +1,9 @@
 pipeline{
-    agent any
+    docker {
+      label 'pipes-docker-agent'
+      registryUrl 'https://docker-repo.artifactory.azwus2.gaptech.com/'
+      image 'docker-repo.artifactory.azwus2.gaptech.com/pipes-docker-agent-allocation-taurus:1.0.0'
+    }
     stages{
         // stage('Test'){
         //     steps{
@@ -8,8 +12,7 @@ pipeline{
         // }
         stage('Use bzt'){
             steps{
-                sh 'pip install bzt'
-                sh 'bzt --help'
+                sh "bzt --help"
                 sh 'bzt blazedemo_script.jmx'
             }
         }
