@@ -1,7 +1,5 @@
 pipeline{
-    agent{
-        dockerfile true
-    }
+    agent any
     stages{
         // stage('Test'){
         //     steps{
@@ -10,6 +8,7 @@ pipeline{
         // }
         stage('Use bzt'){
             steps{
+                sh 'pip install bzt'
                 sh 'bzt --help'
                 sh 'bzt blazedemo_script.jmx'
             }
